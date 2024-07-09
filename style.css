@@ -1,190 +1,66 @@
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    background-color: rgb(187, 194, 207);
+    font font-family: sans-serif;
+    outline: none;
 }
-input{
-    display: none;
-
+.container
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container{
-    width: 100%;
-    text-align: center;
-
-}
-h1{
-    font-weight: normal;
-    font-size: 35px;
-    position: relative;
-    margin: 40px 0;
-
-
-}
-h1::before{
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 3px;
-    background-color: crimson;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%);
-    animation: animate 4s linear infinite;
-
-}
-@keyframes animate{
-    0%{
-        width: 100px;
-    }
-    50%{
-        width: 00px;
-    }
-    100%{
-        width: 100px;
-    }
-}
-.top-content{
-    background-color: rgb(243, 243, 243);
-    width: 90%;
-    margin: 0 auto 20px auto;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px lightgray;
-
-}
-h3{
-    height: 100%;
-    background-color: rgb(221, 221, 221);
-    line-height: 60px;
-    padding: 0 50px;
-    color: white;
-}
-label{
-    
-        display: inline-block;
-        height: 100%;
-       
-        margin: 0 20px;
-        line-height: 60px;
-        font-size: 18px;
-        color: gray;
-        cursor: pointer;
-        transition: color .5s;
-   
-}
-label:hover{
-    color: black;
-
-}
-.photo-gallery{
-    width: 90%;
-    margin: auto;
+.calculator
+{
+    background-color: light rgb(9, 7, 12);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                      5px 5px 12px rgba(0,0,0,.16);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(4,68px);
+}
+input
+{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #eef3f7;
+    box-shadow: inset 5px 5px 12px #4b9280,
+                        5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70,70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+button
+{
+    height: 48px;
+    width: 48px;
+    background-color: lightblue;
+    box-shadow: inset 5px 5px 12px #ffffff,
+    5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
 
 }
-.pic{
-    position: relative;
-    height: 230px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px lightgray;
-    cursor: pointer;
-    transition: .5s;
-}
-.pic img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition: .5s;
-}
-.pic::before{
-    content: "PHOTO GALLERY";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    width: 100%;
-    margin-top: -100px;
-    opacity: 0;
-    transition: .3s;
-    transition-delay: .2s;
-    z-index: 1;
-}
-.pic::after{
-    content: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    border-radius: 10px;
-    height: 0;
-    background-color: rgba(0,0,0,.4);
-    transition: .3s;
-}
-.pic:hover::after{
-    height: 100%;
-}
-.pic:hover::before{
-    margin-top: 0;
-    opacity: 1;
+.equal
+{
+    width: 115px;
+    border-radius: 40px;
+    
+    background-color: lightblue;
+    box-shadow: inset 5px 5px 12px #ffffff,
+    5px 5px 12px rgba(0,0,0,.16);
 
 }
-#check1:checked ~ .container .photo-gallery .pic{
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-    transition: .5s;
-    
-}
-#check2:checked ~ .container .photo-gallery .family{
-    
-    transform: scale(1);
-    opacity: 1;
-    position: relative;
-    
-}
-#check2:checked ~ .container .photo-gallery .child,
-    
-#check2:checked ~ .container .photo-gallery .place{
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: .0s;
-}
-#check3:checked ~ .container .photo-gallery .child{
-    
-    transform: scale(1);
-    opacity: 1;
-    position: relative;
-    
-}
-#check3:checked ~ .container .photo-gallery .family,
-    
-#check3:checked ~ .container .photo-gallery .place{
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: .0s;
-}
-#check4:checked ~ .container .photo-gallery .place{
-    
-    transform: scale(1);
-    opacity: 1;
-    position: relative;
-    
-}
-#check4:checked ~ .container .photo-gallery .family,
-    
-#check4:checked ~ .container .photo-gallery .child{
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: .0s;
-}
-
