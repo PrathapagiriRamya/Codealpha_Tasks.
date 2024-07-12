@@ -3,58 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Prathapagiri Ramya Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            <input type="text" placeholder="0" id="output-screen">
-        
-            <button onclick="Clear()">cl</button>
-            <button onclick="del()">DEL</button>
-            <button onclick="display('%')">%</button>
-            <button onclick="display('/')">/</button>
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button onclick="display('*')">*</button>
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button onclick="display('-')">-</button>
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button onclick="display('+')">+</button>
-            <button onclick="display('.')">.</button>
-            <button onclick="display('0')">0</button>
-            <button onclick="Calculate()" class="equal">=</button>
-            
+    <header>
+        <div class="name-section">
+            <div class="name-circle"></div>
+            <div class="info"><b>Prathapagiri Ramya</b>&nbsp;&nbsp;&nbsp;<span class="title">Engineering Student</span></div>
         </div>
-    </div>
-    <script>
-        let outputScreen = document.getElementById("output-screen");
+        <nav>
+            <ul>
+                <li><a href="#resume">Resume  |</a></li>
+                <li><a href="#research">Research  |</a></li>
+                <li><a href="#talents">Talents  |</a></li>
+                <li><a href="#experience">Experience  |</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        function display(num){
-            outputScreen.value += num;
-        }
-        function Calculate()
-        {
-            try{
-                outputScreen.value = eval(outputScreen.value);
-            }
-            catch(err)
-            {
-                alert("Invalid ")
-            }
-        }
-        function Clear(){
-            outputScreen.value = "";
-        }
-        function del(){
-            outputScreen.value = outputScreen.value.slice(0,-1);
-        }
-    </script>
+
+
+    <main>
+
+        <section class="intro">
+            <div class="intro-image">
+                <img src="https://res.cloudinary.com/dmdsyt9yw/image/upload/v1720790336/ramya_yvfpnk.jpg" alt="Prathapagiri Ramya">
+            </div>
+            <div class="intro-text">
+                <h1>Prathapagiri Ramya</h1>
+                <h2>A Bit About Me</h2>
+                <p class="para">I am an Information Technology student passionate about developing <br>innovative software solutions and learning emerging technologies.<br>With hands-on experience in programming languages like Python and <br>Java, I enjoy solving complex problems and optimizing systems. My goal is<br> to leverage technology to create impactful and efficient digital solutions.</p>
+            </div>
+        </section>
+
+        <section class="circles">
+            <div class="circle" id="resume">Resume</div>
+            <div class="circle" id="research">Research</div>
+            <div class="circle" id="talents">Talents</div>
+            <div class="circle" id="experience">Experience</div>
+        </section>
+
+        
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>This link will take you to my resume hosted externally. Click <a href="https://drive.google.com/file/d/11N_3qeTMAKFp20A4wMBFMJ5eBH8EUimM/view?usp=drivesdk" target="_blank">here</a> to view/download my resume.</p>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <p>Research plays a pivotal role in my academic journey, focusing on exploring cutting-edge technologies and their <br>practical applications. I am particularly interested in areas such as artificial intelligence, data science, and cybersecurity, <br>aiming to contribute innovative solutions to real-world challenges.</p>
+        </section>
+
+        <section id="talents">
+            <h2>Talents</h2>
+            <p>My diverse talents encompass a blend of technical proficiency and creative problem-solving. I excel in software development,<br> leveraging skills in Python, Java, and web technologies to develop robust applications. Additionally, my keen interest <br>in UI/UX design allows me to craft intuitive and user-friendly interfaces that enhance digital experiences.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Through various internships and projects, I have gained valuable hands-on experience in software development lifecycle, project<br> management, and teamwork. I have actively contributed to developing scalable solutions, collaborating with <br>cross-functional teams to deliver projects on time and within scope. This experience has honed my ability to adapt to <br>new challenges and innovate effectively in dynamic environments.</p>
+        </section>
+
+        <hr>
+
+
+        
+
+        <section class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:prathapagiriramya[at]example.com">prathapagiri.ramya[at]example.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/ramyaprathapa_//" target="_blank">github.com/Ramya_prathapa_</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Adams Fellow</h3>
+                <p><a href="https://example.com/adams-fellow/" target="_blank">example.com/adams-fellow</a></p>
+            </div>
+        </section>
+    </main>
+
+    
 </body>
 </html>

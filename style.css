@@ -1,66 +1,200 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(187, 194, 207);
-    font font-family: sans-serif;
-    outline: none;
-}
-.container
-{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.calculator
-{
-    background-color: light rgb(9, 7, 12);
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                      5px 5px 12px rgba(0,0,0,.16);
-    display: grid;
-    grid-template-columns: repeat(4,68px);
-}
-input
-{
-    grid-column: span 4;
-    height: 70px;
-    width: 260px;
-    background-color: #eef3f7;
-    box-shadow: inset 5px 5px 12px #4b9280,
-                        5px 5px 12px rgba(0,0,0,.16);
-    border: none;
-    border-radius: 30px;
-    color: rgb(70, 70,70);
-    font-size: 50px;
-    text-align: end;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 20px;
-}
-button
-{
-    height: 48px;
-    width: 48px;
-    background-color: lightblue;
-    box-shadow: inset 5px 5px 12px #ffffff,
-    5px 5px 12px rgba(0,0,0,.16);
-    border: none;
-    border-radius: 50%;
-    margin: 8px;
-    font-size: 16px;
-
-}
-.equal
-{
-    width: 115px;
-    border-radius: 40px;
     
-    background-color: lightblue;
-    box-shadow: inset 5px 5px 12px #ffffff,
-    5px 5px 12px rgba(0,0,0,.16);
+}
+}
 
+header {
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f0f0f0;
+   
+}
+
+.name-section {
+    display: flex;
+    align-items: center;
+}
+
+.name-circle {
+    width: 20px;
+    height: 20px;
+    background: rgb(83, 200, 239);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.title{
+    font-size: 0.99rem;
+}
+
+.info {
+    font-size: 1.26rem;
+
+    padding: 10px;
+    padding-left: 0px;
+    padding-top: 20px;
+   
+   
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+   
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-bottom: 2rem;
+}
+.para
+{
+    
+    
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.intro-image {
+    flex: 0 0 auto;
+   margin-right: -70px;
+   margin-left: 300px;
+}
+
+.intro-image img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover 60px;
+   
+
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 90px;
+}
+
+.intro-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.intro-text h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    margin: 0;
+
+}
+
+.circles {
+    display: flex;
+    
+  justify-content:center;
+  margin-top: -2rem;
+  
+    margin-bottom: 100px;
+    transform: translateX(100px); /* Move circles to the left by 20px */
+    
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border-radius: 60%;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 11px; /* Remove the margin */
+    padding: 0; /* Remove any padding if present */
+    
+}
+#resume {
+    background-color: rgb(27, 227, 67);
+}
+
+#research {
+    background-color: rgb(240, 70, 23);
+}
+
+#talents {
+    background-color: rgb(70, 170, 245);
+}
+
+#experience {
+    background-color: rgb(241, 97, 190);
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.contact-item {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    font-size: 1rem;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007BFF;
 }
